@@ -94,6 +94,7 @@ public class FindTotalSlicesOfArithmeticFunction {
 		int current = 0;
 
 		for (int i = 2; i < N; i++) {
+			// A pattern
 			if (A[i] - A[i - 1] == A[i - 1] - A[i - 2]) {
 				current += 1;
 				result += current;
