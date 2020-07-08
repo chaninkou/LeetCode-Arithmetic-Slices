@@ -71,8 +71,9 @@ public class FindTotalSlicesOfArithmeticFunction {
         for(int i = 2; i < N; i++){
         	// Check those three elements
             if(A[i] - A[i - 1] == A[i - 1] - A[i - 2]){
+            	// dp[i - 1] because if its same difference before, which mean it is same as current i
                 dp[i] = dp[i - 1] + 1;
-            } else { // Reset back to zero if one don't match
+            } else { // reset to 0, same as dp[1] = 0
                 dp[i] = 0;
             }
             
@@ -82,7 +83,7 @@ public class FindTotalSlicesOfArithmeticFunction {
         return result;
     }
 
-	// O(n) time and O(1) space since we are not using extra memory like dp
+	// O(n) time and O(1) space using variable to store instead of extra O(n) memory like dp
 	public int numberOfArithmeticSlices3(int[] A) {
 		int N = A.length;
 		int result = 0;
