@@ -5,7 +5,7 @@ public class FindTotalSlicesOfArithmeticFunction {
 	public int numberOfArithmeticSlices(int[] A) {
         int result = 0;
         
-        // Check each 3 items
+        // Check every 3 items
         for(int i = 0; i < A.length - 2; i++){
             int previous = 0;
             int samePatterns = 1;
