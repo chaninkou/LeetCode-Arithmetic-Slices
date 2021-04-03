@@ -77,7 +77,7 @@ public class FindTotalSlicesOfArithmeticFunction {
                 dp[i] = 0;
             }
             
-            result += dp[i];
+            result += dp[i]; // update the result everytime
         }
         
         return result;
